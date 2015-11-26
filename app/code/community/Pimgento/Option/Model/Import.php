@@ -142,7 +142,9 @@ class Pimgento_Option_Model_Import extends Pimgento_Core_Model_Import_Abstract
                             array(
                                 'option_id' => 'entity_id',
                                 'store_id'  => $this->_zde($storeId),
-                                'value'     => 'label-' . $local
+                				// START:UPDATED
+                				'value'     => $storeId == 0 ? 'code' : 'label-' . $local
+                				// END:UPDATED
                             )
                         );
 
